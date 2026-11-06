@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>糖心御梦子-御梦子糖心图集_糖心御梦子写真风格与合集导航</title>
+<meta name="description" content="糖心御梦子主题首页，汇聚御梦子糖心风格图集、写真合集与作品目录，介绍糖心御梦子的视觉特色与内容看点，并提供清晰的浏览入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8fb1'/%3E%3Cstop offset='1' stop-color='%23b06ab3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M32 14c5 7 12 9 12 16a12 12 0 0 1-24 0c0-7 7-9 12-16z' fill='%23fff' opacity='0.9'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23b06ab3'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --pink:#ff8fb1;
+    --pink-soft:#ffe4ec;
+    --purple:#b06ab3;
+    --deep:#3d2440;
+    --ink:#2f2433;
+    --muted:#7a6b80;
+    --line:#f0dfe7;
+    --bg:#fff8fb;
+    --card:#ffffff;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(176,106,179,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;}
+  .wrap{width:min(1120px,92vw);margin:0 auto;}
+
+  /* ===== Header ===== */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,248,251,.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px;color:var(--deep);}
+  .logo .mark{width:36px;height:36px;flex:0 0 36px;}
+  nav.main{display:flex;gap:26px;font-size:15px;color:var(--muted);}
+  nav.main a{position:relative;padding:4px 0;transition:color .2s;}
+  nav.main a:hover{color:var(--purple);}
+  nav.main a::after{
+    content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--pink),var(--purple));border-radius:2px;transition:width .25s;
+  }
+  nav.main a:hover::after{width:100%;}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:6px 10px;color:var(--deep);font-size:14px;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:64px 0 56px;
+    background:
+      radial-gradient(600px 300px at 85% 0%,rgba(255,143,177,.22),transparent 70%),
+      radial-gradient(500px 320px at 5% 100%,rgba(176,106,179,.16),transparent 70%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:2px;color:var(--purple);
+    background:var(--pink-soft);padding:6px 14px;border-radius:999px;font-weight:600;
+  }
+  h1{
+    font-size:clamp(30px,4.4vw,46px);
+    line-height:1.25;letter-spacing:1px;
+    margin:18px 0 16px;
+    color:var(--deep);
+    font-weight:800;
+  }
+  h1 .hl{
+    background:linear-gradient(120deg,var(--pink),var(--purple));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lead{font-size:16.5px;color:#5d5063;max-width:33em;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 24px;border-radius:999px;font-size:15px;font-weight:600;
+    transition:transform .18s,box-shadow .18s,background .18s;
+  }
+  .btn-primary{
+    color:#fff;
+    background:linear-gradient(120deg,var(--pink),var(--purple));
+    box-shadow:0 8px 22px rgba(255,143,177,.4);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,143,177,.5);}
+  .btn-ghost{color:var(--deep);background:#fff;border:1px solid var(--line);}
+  .btn-ghost:hover{border-color:var(--pink);color:var(--purple);}
+  .hero-art{
+    position:relative;
+    border-radius:28px;
+    background:linear-gradient(150deg,#fff,#ffeef4 60%,#f5e6ff);
+    box-shadow:var(--shadow);
+    padding:22px;
+  }
+  .hero-art svg{width:100%;height:auto;}
+
+  /* ===== Section basics ===== */
+  section{padding:56px 0;}
+  .sec-head{max-width:38em;margin-bottom:32px;}
+  .sec-tag{
+    font-size:12.5px;letter-spacing:2.5px;color:var(--purple);
+    font-weight:700;text-transform:uppercase;
+  }
+  h2{
+    font-size:clamp(22px,2.8vw,28px);
+    color:var(--deep);font-weight:800;margin:8px 0 12px;letter-spacing:.5px;
+  }
+  .sec-head p{color:var(--muted);font-size:15.5px;}
+
+  /* ===== Feature cards ===== */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;box-shadow:0 4px 16px rgba(176,106,179,.05);
+    transition:transform .2s,box-shadow .2s,border-color .2s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#f6cfe0;}
+  .card .ico{
+    width:46px;height:46px;border-radius:14px;
+    display:grid;place-items:center;margin-bottom:16px;
+    background:linear-gradient(135deg,var(--pink-soft),#f3e6ff);
+  }
+  .card h3{font-size:17.5px;color:var(--deep);margin-bottom:8px;font-weight:700;}
+  .card p{font-size:14.8px;color:var(--muted);}
+
+  /* ===== Gallery ===== */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .g-item{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;transition:transform .2s,box-shadow .2s;
+  }
+  .g-item:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .g-thumb{aspect-ratio:4/3;background:linear-gradient(140deg,#ffe4ec,#f0e2ff);display:grid;place-items:center;}
+  .g-thumb svg{width:64%;height:auto;}
+  .g-body{padding:18px 20px 22px;}
+  .g-body .tag{font-size:12px;color:var(--purple);font-weight:700;letter-spacing:1px;}
+  .g-body h3{font-size:16.5px;color:var(--deep);margin:6px 0 8px;font-weight:700;}
+  .g-body p{font-size:14px;color:var(--muted);}
+
+  /* ===== List / detail ===== */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+  .list{display:flex;flex-direction:column;gap:16px;}
+  .list-item{
+    display:flex;gap:16px;align-items:flex-start;
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+  }
+  .num{
+    flex:0 0 34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--pink),var(--purple));
+    color:#fff;font-weight:700;font-size:14px;
+  }
+  .list-item h3{font-size:15.5px;color:var(--deep);margin-bottom:4px;}
+  .list-item p{font-size:14px;color:var(--muted);}
+  .prose p{font-size:15.5px;color:#4f4355;margin-bottom:16px;}
+  .prose p:last-child{margin-bottom:0;}
+  .prose strong{color:var(--purple);font-weight:700;}
+
+  /* ===== FAQ ===== */
+  .faq{display:flex;flex-direction:column;gap:14px;max-width:820px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:0 20px;transition:border-color .2s;
+  }
+  details[open]{border-color:#f6cfe0;}
+  summary{
+    cursor:pointer;list-style:none;padding:16px 0;
+    font-weight:700;font-size:15.5px;color:var(--deep);
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:20px;color:var(--pink);font-weight:400;transition:transform .2s;}
+  details[open] summary::after{transform:rotate(45deg);}
+  details p{padding-bottom:18px;font-size:14.6px;color:var(--muted);}
+
+  /* ===== CTA ===== */
+  .cta{
+    background:linear-gradient(130deg,#3d2440,#6b3a72 60%,#b06ab3);
+    border-radius:26px;padding:48px 40px;color:#fff;
+    display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;
+  }
+  .cta h2{color:#fff;margin:0 0 8px;}
+  .cta p{color:rgba(255,255,255,.8);font-size:15px;max-width:36em;}
+  .cta .btn-primary{background:#fff;color:var(--deep);box-shadow:none;}
+  .cta .btn-primary:hover{background:var(--pink-soft);}
+  .btn[aria-disabled="true"]{pointer-events:none;opacity:.75;}
+
+  /* ===== Footer ===== */
+  footer.site{
+    border-top:1px solid var(--line);
+    background:#fff;
+    padding:40px 0 32px;margin-top:16px;
+  }
+  .foot{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;}
+  .foot-brand{max-width:26em;}
+  .foot-brand .logo{margin-bottom:12px;}
+  .foot-brand p{font-size:13.6px;color:var(--muted);}
+  .foot-links{display:flex;flex-wrap:wrap;gap:36px;font-size:14px;}
+  .foot-links h4{font-size:14px;color:var(--deep);margin-bottom:10px;font-weight:700;}
+  .foot-links a{display:block;color:var(--muted);margin-bottom:6px;font-size:13.6px;}
+  .foot-links a:hover{color:var(--purple);}
+  .copy{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:12.8px;color:#a396a9;text-align:center;}
+
+  /* ===== Responsive ===== */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .hero-art{order:-1;max-width:420px;margin:0 auto;}
+    .cards,.gallery{grid-template-columns:1fr 1fr;}
+    .split{grid-template-columns:1fr;gap:32px;}
+  }
+  @media (max-width:720px){
+    nav.main{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;gap:0;background:#fff;
+      border-bottom:1px solid var(--line);padding:8px 0;
+    }
+    nav.main.open{display:flex;}
+    nav.main a{padding:12px 6vw;}
+    nav.main a::after{display:none;}
+    .nav-toggle{display:inline-block;}
+    .hero{padding:40px 0 40px;}
+    .cards,.gallery{grid-template-columns:1fr;}
+    section{padding:40px 0;}
+    .cta{padding:34px 24px;}
+    .bar{gap:12px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="糖心御梦子 首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff8fb1"/>
+            <stop offset="1" stop-color="#b06ab3"/>
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="18" fill="url(#lg1)"/>
+        <path d="M32 13c5.4 7.4 13 9.6 13 17.2A13 13 0 0 1 19 30.2C19 22.6 26.6 20.4 32 13z" fill="#fff" opacity=".92"/>
+        <circle cx="32" cy="31" r="4.2" fill="#b06ab3"/>
+      </svg>
+      <span>糖心御梦子</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mainnav">菜单</button>
+    <nav class="main" id="mainnav">
+      <a href="#style">风格特色</a>
+      <a href="#gallery">图集目录</a>
+      <a href="#guide">浏览路径</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">写真图集 · 风格合集</span>
+        <h1>糖心御梦子</h1>
+        <p class="lead">糖心御梦子是一个以柔和粉紫调为视觉基调的写真图集主题。这里按风格、场景与出品系列梳理御梦子糖心的图集目录，帮助你在浏览时快速找到想看的那一组画面。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#gallery">进入图集目录</a>
+          <a class="btn btn-ghost" href="#style">了解风格特色</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 320" role="img" aria-label="糖心御梦子主题插画">
+          <defs>
+            <linearGradient id="h1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffd7e4"/>
+              <stop offset="1" stop-color="#e9d6ff"/>
+            </linearGradient>
+            <linearGradient id="h2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff8fb1"/>
+              <stop offset="1" stop-color="#b06ab3"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="18" width="384" height="284" rx="26" fill="url(#h1)"/>
+          <circle cx="118" cy="112" r="46" fill="#fff" opacity=".85"/>
+          <path d="M118 74c8 11 20 15 20 27a20 20 0 1 1-40 0c0-12 12-16 20-27z" fill="url(#h2)"/>
+          <rect x="196" y="66" width="160" height="16" rx="8" fill="#fff" opacity=".9"/>
+          <rect x="196" y="96" width="118" height="12" rx="6" fill="#fff" opacity=".7"/>
+          <rect x="196" y="122" width="142" height="12" rx="6" fill="#fff" opacity=".55"/>
+          <rect x="60" y="196" width="300" height="76" rx="16" fill="#fff" opacity=".85"/>
+          <circle cx="94" cy="234" r="14" fill="#ffd7e4"/>
+          <rect x="122" y="222" width="150" height="10" rx="5" fill="#f3c7da"/>
+          <rect x="122" y="242" width="98" height="8" rx="4" fill="#efd9f6"/>
+          <circle cx="316" cy="234" r="18" fill="url(#h2)" opacity=".85"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style features -->
+  <section id="style">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Style</span>
+        <h2>糖心御梦子的风格特色</h2>
+        <p>理解糖心御梦子的画面语言，比单纯翻图更有助于挑选喜欢的系列。以下三点是浏览时最常被提到的特征。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="#b06ab3" stroke-width="1.8"/>
+              <path d="M12 7v5l3 2" stroke="#ff8fb1" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>粉紫柔和色调</h3>
+          <p>糖心御梦子整体偏向低饱和的粉与紫，光线柔和，避免强烈对比，长时间翻阅时视觉负担较小。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3.5" y="4.5" width="17" height="15" rx="3" stroke="#b06ab3" stroke-width="1.8"/>
+              <path d="M3.5 15l4.5-4 4 3.5 3-2.5 5.5 4.5" stroke="#ff8fb1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>生活化场景</h3>
+          <p>御梦子糖心的取景多来自日常空间，窗边、书桌与室内角落是常见背景，画面因此更贴近生活质感。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.6-7 9-7 9z" stroke="#ff8fb1" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>成套系列编排</h3>
+          <p>糖心御梦子的图集通常成套发布，同一系列内保持造型与色调统一，便于按系列整体浏览与收藏。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Gallery</span>
+        <h2>糖心御梦子图集目录</h2>
+        <p>按主题分为三类常见方向，每一类对应不同的画面侧重，可先看分类再进入具体系列。</p>
+      </div>
+      <div class="gallery">
+        <article class="g-item">
+          <div class="g-thumb">
+            <svg viewBox="0 0 200 150" aria-hidden="true">
+              <rect x="20" y="20" width="160" height="110" rx="14" fill="#fff" opacity=".9"/>
+              <circle cx="70" cy="62" r="20" fill="#ffd7e4"/>
+              <rect x="104" y="52" width="56" height="9" rx="4" fill="#f3c7da"/>
+              <rect x="104" y="70" width="40" height="8" rx="4" fill="#efd9f6"/>
+              <rect x="40" y="98" width="120" height="8" rx="4" fill="#f7e3ee"/>
+            </svg>
+          </div>
+          <div class="g-body">
+            <span class="tag">日常系列</span>
+            <h3>糖心御梦子·居家日常</h3>
+            <p>以室内场景为主，节奏舒缓，适合作为了解糖心御梦子整体观感的起点。</p>
+          </div>
+        </article>
+        <article class="g-item">
+          <div class="g-thumb">
+            <svg viewBox="0 0 200 150" aria-hidden="true">
+              <rect x="20" y="20" width="160" height="110" rx="14" fill="#fff" opacity=".9"/>
+              <rect x="46" y="46" width="52" height="62" rx="10" fill="#e9d6ff"/>
+              <rect x="108" y="46" width="46" height="28" rx="8" fill="#ffd7e4"/>
+              <rect x="108" y="80" width="46" height="28" rx="8" fill="#f7e3ee"/>
+            </svg>
+          </div>
+          <div class="g-body">
+            <span class="tag">造型系列</span>
+            <h3>御梦子糖心·主题造型</h3>
+            <p>突出服装与妆造的完整度，同一系列内造型变化清晰，适合按套对比观看。</p>
+          </div>
+        </article>
+        <article class="g-item">
+          <div class="g-thumb">
+            <svg viewBox="0 0 200 150" aria-hidden="true">
+              <rect x="20" y="20" width="160" height="110" rx="14" fill="#fff" opacity=".9"/>
+              <circle cx="100" cy="70" r="30" fill="#ffd7e4"/>
+              <path d="M100 44c5 7 12 9 12 16a12 12 0 0 1-24 0c0-7 7-9 12-16z" fill="#b06ab3" opacity=".85"/>
+              <rect x="56" y="110" width="88" height="7" rx="3.5" fill="#efd9f6"/>
+            </svg>
+          </div>
+          <div class="g-body">
+            <span class="tag">精选合辑</span>
+            <h3>糖心御梦子·精选合辑</h3>
+            <p>跨系列挑选的代表画面，适合初次接触糖心御梦子时快速建立整体印象。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guide / detail -->
+  <section id="guide">
+    <div class="wrap split">
+      <div>
+        <div class="sec-head" style="margin-bottom:24px;">
+          <span class="sec-tag">Path</span>
+          <h2>浏览糖心御梦子的三条路径</h2>
+          <p>不同访问目的对应不同入口，先确认自己的需求再决定从哪里开始。</p>
+        </div>
+        <div class="list">
+          <div class="list-item">
+            <div class="num">1</div>
+            <div>
+              <h3>先看风格，再选系列</h3>
+              <p>如果不确定偏好，从风格特色区入手，确认色调与场景是否符合预期。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="num">2</div>
+            <div>
+              <h3>按系列成套浏览</h3>
+              <p>糖心御梦子的图集以套为单位，进入目录后按系列连续翻阅，观感更完整。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="num">3</div>
+            <div>
+              <h3>用合辑快速建立印象</h3>
+              <p>精选合辑跨越多个系列，适合时间有限时先看代表画面，再回溯完整图集。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prose">
+        <p><strong>关于糖心御梦子的内容定位。</strong>糖心御梦子以写真图集为核心，页面围绕图集的分类、系列与浏览顺序组织，不涉及其他类型的内容。御梦子糖心这一称呼在浏览者中常与成套发布的画面联系在一起，因此目录按系列而非单张排列。</p>
+        <p><strong>关于浏览节奏。</strong>图集类内容容易一次翻阅过多，建议按系列分批观看，每个系列看完再进入下一组。糖心御梦子的色调统一，连续浏览时不易产生突兀感，但适当停顿仍有助于保持观感。</p>
+        <p><strong>关于内容更新。</strong>系列会随出品节奏陆续补充，目录中的分类保持稳定，新增内容归入对应方向。糖心御梦子的新旧系列在视觉基调上保持一致，回看旧系列同样顺畅。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">FAQ</span>
+        <h2>关于糖心御梦子的常见问题</h2>
+        <p>整理浏览者最常提出的几个问题，答案围绕本页内容范围给出。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>糖心御梦子的图集按什么方式分类？</summary>
+          <p>本页将糖心御梦子的图集分为日常系列、主题造型与精选合辑三类。日常系列侧重室内场景，主题造型侧重服装与妆造，精选合辑则是跨系列的代表画面集合。</p>
+        </details>
+        <details>
+          <summary>御梦子糖心和糖心御梦子是同一主题吗？</summary>
+          <p>是。御梦子糖心是糖心御梦子在浏览者中的常见叫法，指向同一类写真图集内容，本页统一以糖心御梦子作为主题名称使用。</p>
+        </details>
+        <details>
+          <summary>第一次浏览应该从哪一组开始？</summary>
+          <p>建议先看精选合辑建立整体印象，再回到风格特色区确认偏好，最后进入具体系列。这样能减少在目录中反复跳转的时间。</p>
+        </details>
+        <details>
+          <summary>页面中的图集入口目前可以打开吗？</summary>
+          <p>目录结构已按系列整理完毕，具体系列页面正在补充中。当前可先通过分类了解糖心御梦子的内容构成，入口开放后会直接指向对应系列。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>收藏糖心御梦子图集目录</h2>
+          <p>把本页加入收藏，按风格与系列回看糖心御梦子的画面，新增系列也会归入现有分类。</p>
+        </div>
+        <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff8fb1"/>
+                <stop offset="1" stop-color="#b06ab3"/>
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="18" fill="url(#lg2)"/>
+            <path d="M32 13c5.4 7.4 13 9.6 13 17.2A13 13 0 0 1 19 30.2C19 22.6 26.6 20.4 32 13z" fill="#fff" opacity=".92"/>
+            <circle cx="32" cy="31" r="4.2" fill="#b06ab3"/>
+          </svg>
+          <span>糖心御梦子</span>
+        </a>
+        <p>糖心御梦子主题首页，整理御梦子糖心写真图集的风格特点、系列分类与浏览顺序，帮助访问者按需找到对应内容。</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>内容</h4>
+          <a href="#style">风格特色</a>
+          <a href="#gallery">图集目录</a>
+          <a href="#guide">浏览路径</a>
+        </div>
+        <div>
+          <h4>帮助</h4>
+          <a href="#faq">常见问题</a>
+          <a href="#top">返回顶部</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2024 糖心御梦子 · 本站为图集主题导航页面</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn=document.querySelector('.nav-toggle');
+    var nav=document.getElementById('mainnav');
+    if(btn&&nav){
+      btn.addEventListener('click',function(){
+        var open=nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded',open?'true':'false');
+      });
+      nav.addEventListener('click',function(e){
+        if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+      });
+    }
+  })();
+</script>
+</body>
+</html>
