@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>茄子抖音短视频-茄子短视频内容浏览_短视频分类与看点速览</title>
+<meta name="description" content="茄子抖音短视频是一个围绕茄子相关短视频的内容浏览页，汇集短视频分类、热门看点与内容入口，方便按类型快速查看茄子抖音短视频的常见内容方向。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e1b2e'/%3E%3Cellipse cx='32' cy='36' rx='17' ry='13' fill='%238b5cf6'/%3E%3Cellipse cx='26' cy='33' rx='4' ry='6' fill='%23f8f5ff' opacity='.85'/%3E%3Cpath d='M32 23c2-6 8-9 14-8-1 6-6 10-12 10z' fill='%2334d399'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#14121f;
+  --bg-soft:#1d1a2c;
+  --card:#242034;
+  --line:#332d47;
+  --ink:#f4f1fb;
+  --muted:#a9a2c0;
+  --purple:#9b6dff;
+  --mint:#34d399;
+  --pink:#f472b6;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(20,18,31,.86);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:14px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;letter-spacing:.3px}
+.brand .mark{width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:linear-gradient(140deg,#3a2f5c,#221d33);display:grid;place-items:center}
+nav.main{display:flex;gap:6px;flex-wrap:wrap;font-size:.92rem}
+nav.main a{padding:7px 12px;border-radius:999px;color:var(--muted);transition:.2s}
+nav.main a:hover{background:var(--bg-soft);color:var(--ink)}
+nav.main a.cta{background:linear-gradient(120deg,var(--purple),#c084fc);color:#fff;font-weight:600}
+
+/* 首屏 */
+.hero{padding:64px 0 52px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(155,109,255,.35),transparent 68%);
+  filter:blur(10px);pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;color:var(--mint);
+  border:1px solid rgba(52,211,153,.35);background:rgba(52,211,153,.08);
+  padding:5px 12px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.25;letter-spacing:-.5px;font-weight:800}
+h1 .hl{background:linear-gradient(100deg,var(--mint),var(--purple) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:18px;color:var(--muted);font-size:1.02rem;max-width:34em}
+.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;font-size:.95rem;transition:.2s}
+.btn-primary{background:linear-gradient(120deg,var(--purple),#c084fc);color:#fff;box-shadow:0 10px 26px -12px rgba(155,109,255,.9)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:var(--bg-soft)}
+.btn-ghost:hover{border-color:var(--purple)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed}
+.hero-stats{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.hero-stats div{font-size:.84rem;color:var(--muted)}
+.hero-stats b{display:block;font-size:1.25rem;color:var(--ink);font-weight:700}
+
+/* 首屏视觉 */
+.hero-art{position:relative;aspect-ratio:4/4.4;border-radius:24px;overflow:hidden;
+  background:linear-gradient(160deg,#2b2440,#1a1728);border:1px solid var(--line);
+  display:grid;place-items:center}
+.hero-art .phone{width:66%;aspect-ratio:9/16;border-radius:26px;background:#0f0d18;border:6px solid #3a3352;
+  position:relative;overflow:hidden;box-shadow:0 24px 50px -20px rgba(0,0,0,.9)}
+.hero-art .screen{position:absolute;inset:0;background:
+  radial-gradient(circle at 70% 18%,rgba(244,114,182,.35),transparent 55%),
+  radial-gradient(circle at 25% 80%,rgba(52,211,153,.3),transparent 55%),
+  linear-gradient(180deg,#221d33,#141220)}
+.hero-art .egg{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:58%}
+.hero-art .mini{position:absolute;left:12%;right:12%;bottom:8%;display:flex;flex-direction:column;gap:6px}
+.hero-art .mini span{height:7px;border-radius:4px;background:rgba(255,255,255,.16)}
+.hero-art .mini span:nth-child(1){width:80%}
+.hero-art .mini span:nth-child(2){width:55%;background:rgba(52,211,153,.5)}
+.badge-float{position:absolute;padding:6px 12px;border-radius:999px;font-size:.75rem;font-weight:600;
+  background:rgba(36,32,52,.92);border:1px solid var(--line);color:var(--ink)}
+.badge-float.b1{top:16%;right:8%}
+.badge-float.b2{bottom:20%;left:7%;color:var(--mint)}
+
+/* 通用分节 */
+section{padding:54px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:30px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(1.35rem,2.6vw,1.7rem);font-weight:700;letter-spacing:-.2px}
+.sec-head p{color:var(--muted);font-size:.92rem;max-width:40em;margin-top:6px}
+.eyebrow{color:var(--purple);font-size:.78rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:8px}
+
+/* 分类卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;transition:.22s}
+.card:hover{transform:translateY(-4px);border-color:rgba(155,109,255,.6)}
+.card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:rgba(155,109,255,.14)}
+.card h3{font-size:1.05rem;margin-bottom:8px}
+.card p{font-size:.9rem;color:var(--muted)}
+
+/* 热点列表 */
+.hot{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.list{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:8px 0}
+.item{display:flex;gap:14px;padding:16px 22px;border-bottom:1px solid var(--line);align-items:flex-start}
+.item:last-child{border-bottom:0}
+.item .rank{flex:0 0 26px;height:26px;border-radius:8px;display:grid;place-items:center;
+  font-size:.8rem;font-weight:700;background:rgba(155,109,255,.16);color:var(--purple)}
+.item:nth-child(1) .rank{background:rgba(244,114,182,.18);color:var(--pink)}
+.item:nth-child(2) .rank{background:rgba(52,211,153,.16);color:var(--mint)}
+.item h4{font-size:.96rem;margin-bottom:3px}
+.item p{font-size:.84rem;color:var(--muted)}
+.aside{background:linear-gradient(160deg,#2a2340,#1b1729);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.aside h3{font-size:1.02rem;margin-bottom:12px}
+.aside p{font-size:.9rem;color:var(--muted);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.8rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--bg-soft)}
+
+/* 正文 */
+.prose-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.prose h3{font-size:1.08rem;margin-bottom:10px}
+.prose p{font-size:.94rem;color:#cfc9e0;margin-bottom:16px}
+.prose p:last-child{margin-bottom:0}
+
+/* 操作区 */
+.action{background:linear-gradient(130deg,#251f3a,#191624);border:1px solid var(--line);
+  border-radius:22px;padding:44px 38px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.action h2{font-size:1.45rem;margin-bottom:8px}
+.action p{color:var(--muted);font-size:.93rem;max-width:36em}
+
+/* 页尾 */
+footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:26px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+.foot .fbrand{font-weight:700;color:var(--ink);margin-bottom:6px}
+.foot a:hover{color:var(--purple)}
+
+@media(max-width:900px){
+  .hero-grid,.hot,.prose-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .hero-art{max-width:340px;margin:0 auto;width:100%}
+  .hero{padding:42px 0 36px}
+}
+@media(max-width:600px){
+  .cards{grid-template-columns:1fr}
+  .action{padding:30px 22px}
+  .head-inner{padding:12px 0}
+  nav.main{font-size:.85rem;gap:2px}
+  nav.main a{padding:6px 9px}
+  section{padding:40px 0}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 64 64" fill="none">
+          <ellipse cx="32" cy="38" rx="17" ry="13" fill="#9b6dff"/>
+          <ellipse cx="26" cy="34" rx="4" ry="6" fill="#f8f5ff" opacity=".85"/>
+          <path d="M32 24c2-6 8-9 14-8-1 6-6 10-12 10z" fill="#34d399"/>
+        </svg>
+      </span>
+      茄子抖音短视频
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#types">内容分类</a>
+      <a href="#hot">热门看点</a>
+      <a href="#guide">浏览说明</a>
+      <a href="#browse" class="cta">开始浏览</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">● 内容浏览入口</span>
+        <h1>茄子抖音短视频</h1>
+        <p class="lead">茄子抖音短视频是一个围绕茄子相关短视频的内容浏览页。这里按类型归拢常见内容方向，把热门看点、分类标签与浏览入口放在同一页，方便你直接按兴趣查看，而不是在零散链接之间来回跳转。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#hot">查看热门看点
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#types">按分类浏览</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>3 类</b>内容方向</div>
+          <div><b>8 条</b>热点看点</div>
+          <div><b>6 个</b>常用标签</div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="phone">
+          <div class="screen"></div>
+          <svg class="egg" viewBox="0 0 120 120" fill="none">
+            <ellipse cx="60" cy="72" rx="40" ry="30" fill="#8b5cf6"/>
+            <ellipse cx="60" cy="72" rx="40" ry="30" fill="url(#g1)"/>
+            <ellipse cx="48" cy="66" rx="8" ry="12" fill="#f8f5ff" opacity=".8"/>
+            <path d="M60 44c4-11 15-16 26-14-2 11-11 18-22 18z" fill="#34d399"/>
+            <defs>
+              <linearGradient id="g1" x1="20" y1="50" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#c084fc" stop-opacity=".65"/>
+                <stop offset="1" stop-color="#34d399" stop-opacity=".25"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="mini"><span></span><span></span></div>
+        </div>
+        <span class="badge-float b1">分类浏览</span>
+        <span class="badge-float b2">看点速览</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容分类 -->
+  <section id="types">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Content Types</div>
+          <h2>茄子抖音短视频的常见内容方向</h2>
+          <p>茄子抖音短视频的内容大多围绕食材本身展开。按下面三类出发，可以更快定位到自己想看的部分。</p>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b6dff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19c0-8 6-14 16-14 0 9-6 14-14 14z"/><path d="M8 16c2-3 5-5 8-6"/>
+            </svg>
+          </div>
+          <h3>食材与挑选</h3>
+          <p>围绕茄子外观、品种与新鲜度的短视频，通常以近景展示为主，适合在准备做饭前快速看一眼。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 13h14v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M8 13V8a4 4 0 0 1 8 0v5"/>
+            </svg>
+          </div>
+          <h3>家常做法</h3>
+          <p>茄子抖音短视频中占比很高的一类，以步骤短、节奏快的方式呈现常见家常做法，便于跟着操作。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5h16v11H4z"/><path d="M9 20l3-4 3 4"/>
+            </svg>
+          </div>
+          <h3>创意与合集</h3>
+          <p>同一主题下的多条短视频被归成合集，适合连续浏览，也更容易比较不同做法之间的差异。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门看点 -->
+  <section id="hot">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Highlights</div>
+          <h2>热门看点速览</h2>
+          <p>下面按浏览热度列出常见看点，标题仅描述内容方向，具体内容以各条短视频实际呈现为准。</p>
+        </div>
+      </div>
+      <div class="hot">
+        <div class="list">
+          <div class="item"><span class="rank">1</span><div><h4>长茄子与圆茄子的差异</h4><p>从外形、口感与常见用途三个角度对比，适合挑选时参考。</p></div></div>
+          <div class="item"><span class="rank">2</span><div><h4>少油做法合集</h4><p>把几条控油思路放在一起，方便比较不同处理方式。</p></div></div>
+          <div class="item"><span class="rank">3</span><div><h4>凉拌茄子的步骤拆解</h4><p>以短流程呈现，重点在于蒸制与调味顺序。</p></div></div>
+          <div class="item"><span class="rank">4</span><div><h4>茄子保存与预处理</h4><p>介绍切后处理与短期保存的常见做法。</p></div></div>
+          <div class="item"><span class="rank">5</span><div><h4>家常红烧的收汁要点</h4><p>把火候与收汁节奏单独拎出来讲，便于对照操作。</p></div></div>
+        </div>
+        <aside class="aside">
+          <h3>常用标签</h3>
+          <p>标签用于整理茄子抖音短视频中的同类内容，点击浏览时可按标签缩小范围。标签本身不代表内容质量排序。</p>
+          <div class="chips">
+            <span class="chip">食材挑选</span>
+            <span class="chip">家常做法</span>
+            <span class="chip">少油</span>
+            <span class="chip">凉拌</span>
+            <span class="chip">合集</span>
+            <span class="chip">保存</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 浏览说明 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">How to Browse</div>
+          <h2>如何更高效地浏览茄子抖音短视频</h2>
+        </div>
+      </div>
+      <div class="prose-grid">
+        <div class="prose">
+          <h3>先定方向，再看细节</h3>
+          <p>茄子抖音短视频的内容跨度不小，从挑选到做法都有。建议先按上面的分类确定方向，再进入具体条目，避免在无关内容上花时间。若是准备做饭前临时查看，直接看做法类会更省事。</p>
+          <p>浏览时把注意力放在步骤顺序与用量提示上。同一道菜常有不同版本，比较两三条后再动手，通常比只看一条更稳妥。</p>
+        </div>
+        <div class="prose">
+          <h3>把合集当作对照</h3>
+          <p>合集类内容把茄子抖音短视频中的同类主题放在一起，适合横向比较。你可以先看合集概览，再挑其中一两条细看，这样更容易发现做法之间的差别。</p>
+          <p>标签与分类只是入口，不构成推荐排序。看完之后，把适合自己的那条记下来，比反复搜索更有效。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 操作区 -->
+  <section id="browse">
+    <div class="wrap">
+      <div class="action">
+        <div>
+          <h2>从分类开始浏览</h2>
+          <p>茄子抖音短视频把分类、看点与标签集中在同一页，先从最感兴趣的方向进入即可。页面内容会随条目更新而调整。</p>
+        </div>
+        <div class="hero-actions" style="margin-top:0">
+          <a class="btn btn-primary" href="#types">进入分类</a>
+          <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="fbrand">茄子抖音短视频</div>
+      <div>茄子相关短视频的内容浏览入口，按分类与看点组织。</div>
+    </div>
+    <div>
+      <div>页面导航</div>
+      <div><a href="#types">内容分类</a> · <a href="#hot">热门看点</a> · <a href="#guide">浏览说明</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
