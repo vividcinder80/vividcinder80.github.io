@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人人视频官网-人人视频下载与电脑版客户端_美剧韩剧在线观看</title>
+<meta name="description" content="人人视频官网首页，提供人人视频客户端下载、电脑版与手机版安装说明，以及美剧韩剧日剧泰剧在线观看入口和播放常见问题解答。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111c2b'/%3E%3Cpath d='M26 20l18 12-18 12z' fill='%233ddc97'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#111c2b;
+    --ink-2:#1b2a3d;
+    --paper:#f6f8fa;
+    --card:#ffffff;
+    --line:#e2e8ee;
+    --muted:#5c6b7a;
+    --accent:#0f9d63;
+    --accent-2:#3ddc97;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{width:min(1120px,92vw);margin:0 auto;}
+
+  /* header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(17,28,43,.96);
+    backdrop-filter:blur(8px);
+    color:#e9f1f7;
+  }
+  .bar{display:flex;align-items:center;gap:18px;padding:14px 0;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:.02em;}
+  .brand svg{flex:none;}
+  nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;}
+  nav.main a{
+    padding:6px 12px;border-radius:8px;font-size:14px;color:#c5d3e0;
+  }
+  nav.main a:hover,nav.main a:focus-visible{background:#22334a;color:#fff;}
+  .cta{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--accent);color:#fff;font-weight:600;font-size:14px;
+    padding:9px 18px;border-radius:999px;border:0;cursor:pointer;
+    transition:background .2s;
+  }
+  .cta:hover{background:#0c8454;}
+
+  /* hero */
+  .hero{
+    background:linear-gradient(160deg,#111c2b 0%,#1b2a3d 55%,#16324a 100%);
+    color:#eaf2f9;
+    padding:56px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;
+    background:radial-gradient(circle,rgba(61,220,151,.28),transparent 65%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:40px;align-items:center;position:relative;z-index:1;}
+  .tagline{
+    display:inline-block;font-size:13px;letter-spacing:.08em;
+    color:var(--accent-2);border:1px solid rgba(61,220,151,.4);
+    padding:3px 12px;border-radius:999px;margin-bottom:16px;
+  }
+  h1{
+    font-size:clamp(28px,4vw,44px);
+    line-height:1.25;margin:0 0 16px;letter-spacing:.01em;
+  }
+  .hero p.lead{font-size:16px;color:#c4d4e2;margin:0 0 26px;max-width:36em;}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .ghost{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;
+    border:1px solid rgba(233,241,247,.35);color:#e9f1f7;
+  }
+  .ghost:hover{background:rgba(233,241,247,.1);}
+  .hero-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(233,241,247,.16);
+    border-radius:var(--radius);
+    padding:20px 22px;
+  }
+  .hero-card h2{font-size:15px;margin:0 0 12px;color:var(--accent-2);font-weight:600;letter-spacing:.04em;}
+  .hero-card ul{list-style:none;margin:0;padding:0;font-size:14px;color:#c9d8e6;}
+  .hero-card li{display:flex;gap:10px;padding:7px 0;border-bottom:1px dashed rgba(233,241,247,.14);}
+  .hero-card li:last-child{border-bottom:0;}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);margin-top:9px;flex:none;}
+
+  /* sections */
+  section{padding:56px 0;}
+  section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:28px;max-width:46em;}
+  .sec-head .kicker{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.1em;}
+  h2.sec-title{font-size:clamp(21px,2.6vw,27px);margin:6px 0 10px;line-height:1.35;}
+  .sec-head p{margin:0;color:var(--muted);font-size:15px;}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;
+  }
+  .card .ic{
+    width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+    background:#e8f7f0;color:#0f9d63;
+  }
+  .card h3{margin:0;font-size:17px;}
+  .card p{margin:0;font-size:14.5px;color:var(--muted);}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+  .steps{list-style:none;margin:0;padding:0;counter-reset:step;}
+  .steps li{
+    counter-increment:step;position:relative;padding:0 0 22px 52px;
+  }
+  .steps li::before{
+    content:counter(step);
+    position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;
+    background:var(--ink);color:var(--accent-2);font-weight:700;font-size:15px;
+    display:grid;place-items:center;
+  }
+  .steps li:not(:last-child)::after{
+    content:"";position:absolute;left:16px;top:38px;bottom:4px;width:2px;background:var(--line);
+  }
+  .steps strong{display:block;font-size:15.5px;margin-bottom:2px;}
+  .steps span{font-size:14.5px;color:var(--muted);}
+
+  .panel{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;
+  }
+  .panel h3{margin:0 0 12px;font-size:16px;}
+  .kv{display:flex;justify-content:space-between;gap:16px;font-size:14.5px;padding:9px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:0;}
+  .kv span:first-child{color:var(--muted);}
+  .kv span:last-child{font-weight:600;text-align:right;}
+
+  .dl-box{
+    margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+  }
+  .btn-disabled{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#0f9d63;color:#fff;font-weight:600;font-size:14px;
+    padding:10px 22px;border-radius:999px;
+    pointer-events:none;
+  }
+  .dl-note{font-size:13px;color:var(--muted);}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
+  .chip{
+    font-size:13.5px;padding:6px 14px;border-radius:999px;
+    background:#eef3f7;color:#31465c;border:1px solid var(--line);
+  }
+
+  .faq{display:grid;gap:14px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:16px 20px;
+  }
+  details[open]{border-color:#bfe6d3;background:#fbfefc;}
+  summary{
+    cursor:pointer;font-weight:600;font-size:15.5px;list-style:none;
+    display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--accent);font-size:20px;font-weight:400;line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{margin:10px 0 0;font-size:14.5px;color:var(--muted);}
+
+  footer.site{
+    background:var(--ink);color:#9fb1c2;padding:36px 0 30px;font-size:13.5px;
+  }
+  .foot-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start;}
+  .foot-brand{display:flex;align-items:center;gap:10px;color:#e9f1f7;font-weight:700;font-size:16px;}
+  .foot-links{display:flex;gap:18px;flex-wrap:wrap;}
+  .foot-links a:hover{color:#fff;}
+  .foot-note{margin-top:20px;padding-top:18px;border-top:1px solid rgba(233,241,247,.14);line-height:1.8;}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .cards{grid-template-columns:1fr 1fr;}
+    .split{grid-template-columns:1fr;gap:30px;}
+  }
+  @media(max-width:620px){
+    nav.main{margin-left:0;width:100%;order:3;}
+    nav.main a{padding:6px 10px;font-size:13.5px;}
+    .bar{gap:12px;padding:12px 0;}
+    .hero{padding:40px 0 48px;}
+    .cards{grid-template-columns:1fr;}
+    section{padding:42px 0;}
+    .panel{padding:20px 18px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="人人视频官网首页">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#22334a"/>
+        <path d="M26 19l20 13-20 13z" fill="#3ddc97"/>
+      </svg>
+      <span>人人视频官网</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#download">客户端下载</a>
+      <a href="#content">剧集观看</a>
+      <a href="#guide">安装指引</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tagline">美剧 · 韩剧 · 日剧 · 泰剧</span>
+      <h1>人人视频官网</h1>
+      <p class="lead">人人视频官网为剧迷提供海外剧集的在线观看入口与客户端下载说明。在这里，你可以了解人人视频电脑版与手机版的安装方式，按剧集类型查找想看的内容，并就播放、登录等常见问题找到对应答复。</p>
+      <div class="hero-actions">
+        <a class="cta" href="#download">前往下载页</a>
+        <a class="ghost" href="#content">浏览剧集分类</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="页面要点">
+      <h2>本页可以查到</h2>
+      <ul>
+        <li><span class="dot"></span>人人视频客户端各平台版本说明</li>
+        <li><span class="dot"></span>电脑版与手机版的安装步骤</li>
+        <li><span class="dot"></span>剧集分类与字幕语言范围</li>
+        <li><span class="dot"></span>播放卡顿、登录异常的排查思路</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">客户端下载</span>
+      <h2 class="sec-title">人人视频官网下载入口说明</h2>
+      <p>不同设备适合的安装包并不相同。先确认自己使用的是电脑还是手机，再对照下表选择对应版本，可以少走弯路。</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </span>
+        <h3>Windows 电脑版</h3>
+        <p>适合在桌面端长时间追剧的用户，支持窗口化与全屏两种观看方式，安装前建议确认系统为较新的 Windows 版本。</p>
+      </article>
+      <article class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+        </span>
+        <h3>手机版客户端</h3>
+        <p>Android 与 iOS 分别提供安装方式，移动端更适合碎片时间观看，下载后需在系统设置中允许安装来源。</p>
+      </article>
+      <article class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+        </span>
+        <h3>版本与更新</h3>
+        <p>客户端会不定期推送更新以修复播放问题。若旧版本出现加载失败，优先尝试升级到较新的安装包。</p>
+      </article>
+    </div>
+
+    <div class="split" style="margin-top:38px;">
+      <div class="panel">
+        <h3>下载前请核对</h3>
+        <div class="kv"><span>适用平台</span><span>Windows / Android / iOS</span></div>
+        <div class="kv"><span>安装方式</span><span>安装包本地安装</span></div>
+        <div class="kv"><span>网络要求</span><span>稳定宽带或移动网络</span></div>
+        <div class="kv"><span>账号</span><span>需注册后登录使用</span></div>
+        <div class="dl-box">
+          <a class="btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+          <span class="dl-note">安装包地址以官方发布为准，请在获取后核对文件来源。</span>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 10px;font-size:16px;">为什么先看下载说明</h3>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:14.5px;">人人视频官网的访问者中，有相当一部分是为了在电脑上观看剧集而来。电脑版与网页观看的体验差别主要在播放器稳定性与字幕同步上，因此安装前了解版本信息，比直接点击下载更省时间。</p>
+        <p style="margin:0;color:var(--muted);font-size:14.5px;">如果你只是想临时看一两集，也可以先用网页端登录，再决定是否安装客户端。两条路径使用的账号是同一套。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="content" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">剧集观看</span>
+      <h2 class="sec-title">按类型找到想看的海外剧</h2>
+      <p>人人视频官网的内容以海外剧集为主，覆盖多个语种与地区。打开客户端后，可按地区分类进入对应频道，再根据更新节奏追剧。</p>
+    </div>
+    <div class="split">
+      <div>
+        <h3 style="margin:0 0 12px;font-size:16px;">主要剧集类型</h3>
+        <div class="chips">
+          <span class="chip">美剧</span>
+          <span class="chip">英剧</span>
+          <span class="chip">韩剧</span>
+          <span class="chip">日剧</span>
+          <span class="chip">泰剧</span>
+          <span class="chip">其他语种剧集</span>
+        </div>
+        <p style="margin:18px 0 0;color:var(--muted);font-size:14.5px;">分类页通常按热度和更新时间排序。新剧上线初期更新频率较高，老剧则多为整季可看。字幕一般提供中文版本，部分剧集保留原声。</p>
+      </div>
+      <div class="panel">
+        <h3>观看前建议</h3>
+        <div class="kv"><span>账号状态</span><span>登录后可同步观看记录</span></div>
+        <div class="kv"><span>画质</span><span>根据网络自动切换</span></div>
+        <div class="kv"><span>字幕</span><span>以中文为主</span></div>
+        <div class="kv"><span>收藏</span><span>支持加入追剧列表</span></div>
+        <p style="margin:14px 0 0;font-size:13.5px;color:var(--muted);">以上为客户端常见功能范围，实际可用项以你安装的版本为准。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">安装指引</span>
+      <h2 class="sec-title">三步完成人人视频官网客户端安装</h2>
+      <p>从获取安装包到正常播放，中间的步骤不多，但每一步都有容易忽略的细节。</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <strong>获取安装包</strong>
+        <span>在下载页选择与设备匹配的版本。手机端安装前，需在系统设置中允许来自浏览器的安装来源。</span>
+      </li>
+      <li>
+        <strong>完成安装并登录</strong>
+        <span>运行安装程序，按提示完成安装。首次打开需要注册或登录账号，登录后观看记录才会跨设备同步。</span>
+      </li>
+      <li>
+        <strong>选择剧集开始观看</strong>
+        <span>进入分类页选择想看的剧集，播放器会根据网络状况调整清晰度。若出现缓冲，可先降低画质再重试。</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">常见问题</span>
+      <h2 class="sec-title">关于人人视频官网的常见疑问</h2>
+      <p>以下问题来自访问者在下载与观看过程中较常遇到的情况，按现象给出可操作的排查方向。</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>电脑版安装后打不开是什么原因？</summary>
+        <p>先确认安装包与系统版本匹配，再尝试以管理员身份运行。若仍无法启动，可能是旧版本残留文件冲突，卸载后重新安装通常可以解决。</p>
+      </details>
+      <details>
+        <summary>播放时画面卡顿、字幕不同步怎么办？</summary>
+        <p>多数情况与网络波动有关。可先切换到较低画质，或暂停缓冲一段时间再继续。字幕不同步时，检查是否开启了两条字幕轨道。</p>
+      </details>
+      <details>
+        <summary>手机版提示无法安装如何处理？</summary>
+        <p>Android 设备需在设置中允许未知来源安装；iOS 设备请按页面提示的系统方式操作。安装前建议清理足够的存储空间。</p>
+      </details>
+      <details>
+        <summary>登录失败或账号异常怎么排查？</summary>
+        <p>先确认网络可用，再核对账号与密码。若多次尝试仍失败，可更换网络环境后重试，或通过客户端内的找回入口重置密码。</p>
+      </details>
+      <details>
+        <summary>观看记录为什么没有同步？</summary>
+        <p>观看记录与账号绑定。请确认各设备登录的是同一个账号，并保持客户端为较新版本，否则同步可能延迟。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#22334a"/>
+          <path d="M26 19l20 13-20 13z" fill="#3ddc97"/>
+        </svg>
+        <span>人人视频官网</span>
+      </div>
+      <div class="foot-links">
+        <a href="#download">客户端下载</a>
+        <a href="#content">剧集观看</a>
+        <a href="#guide">安装指引</a>
+        <a href="#faq">常见问题</a>
+      </div>
+    </div>
+    <p class="foot-note">人人视频官网页面内容用于说明客户端下载与剧集观看的相关信息。各平台安装包、可用剧集范围与功能项以官方实际发布为准；页面中的下载按钮为占位入口，正式地址发布后替换使用。</p>
+  </div>
+</footer>
+
+</body>
+</html>
